@@ -1,0 +1,45 @@
+<!--
+Use the following R command to sweave this file:
+Sweave("R2htmlExample3.snw",driver=RweaveHTML(), cssfile="R2HTML.css")
+!-->
+
+<html>
+<head>
+<h1>
+Simple example of using R2HTML via Sweave
+</h1>
+</head>
+
+<h3>
+Introduction
+</h3>
+
+<<Intro,echo=false>>=
+data(iris)
+@
+
+<p>Consider Fisher's famous iris data set.  It has sepal and petal length and width of a total
+of <Sexpr nrow(iris)> flowers from <Sexpr nlevels(iris$Species)> species </p>
+
+<p>The first few lines of the data are shown in Table 1.</p>
+
+<<IrisHead, results=html, echo=false>>=
+  HTML(head(iris), caption="Table 1. Data for the first 6 flowers.")
+@
+
+<h3>Analyzing petal widths</h3>
+<p>Figure 1 shows a boxplot of petal widths by species -  there is a large apparent separation of this measurement.</p>
+
+<<IrisPlot, echo=false, fig=true, caption=Variation of petal width by species, width=600, height=300, HTMLwidth=600, HTMLheight=300>>=
+  boxplot(Petal.Width ~ Species, data=iris)
+@
+
+<p>The separation can be formally confirmed via ANOVA:</p>
+
+<<IrisAnova, results=html, echo=false>>=
+  aov1 <- aov(Petal.Width ~ Species, data=iris)
+  HTML(summary(aov1))
+@
+
+</html>
+

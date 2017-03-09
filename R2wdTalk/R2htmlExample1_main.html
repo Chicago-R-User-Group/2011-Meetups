@@ -1,0 +1,187 @@
+<html xmlns:mml="http://www.w3.org/1998/Math/MathML">
+<head>
+<title> R output </title>
+<link rel=stylesheet href="R2HTML.css" type=text/css>
+<object id="mathplayer" classid="clsid:32F66A20-7614-11D4-BD11-00104BD3F987"></object>
+<?import namespace="mml" implementation="#mathplayer"?>
+<script type="text/javascript" src="ASCIIMathML.js"></script>
+<link href="./runtime/styles/xp/grid.css" rel="stylesheet" type="text/css" ></link>
+<link href="gridR2HTML.css" rel="stylesheet" type="text/css" ></link>
+
+<script src="./runtime/lib/grid.js"></script>
+
+<script src="./gridR2HTML.js"></script>
+<script>
+   nequations=0;
+</script>
+</head>
+<body onload="translate()" bgcolor= FFFFFF background="" >
+<a name=Num2>&nbsp;</a>
+<p><xmp class=command>> data(iris)</xmp></p>
+
+<p class='character'>iris</p>
+
+<a name=Num3>&nbsp;</a>
+<p><xmp class=command>> head(iris)</xmp></p>
+
+
+<p align= center >
+<table cellspacing=0 border=1>
+<caption align=bottom class=captiondataframe></caption>
+<tr><td>
+	<table border=0 class=dataframe>
+	<tbody> 
+	<tr class= firstline > 
+		<th>&nbsp;  </th>
+		<th>Sepal.Length  </th>
+		<th>Sepal.Width  </th>
+		<th>Petal.Length  </th>
+		<th>Petal.Width  </th>
+		<th>Species</th> 
+	</tr> 
+<tr> 
+<td class=firstcolumn>1
+</td>
+<td class=cellinside>5.1
+</td>
+<td class=cellinside>3.5
+</td>
+<td class=cellinside>1.4
+</td>
+<td class=cellinside>0.2
+</td>
+<td class=cellinside>setosa
+</td></tr>
+ 
+<tr> 
+<td class=firstcolumn>2
+</td>
+<td class=cellinside>4.9
+</td>
+<td class=cellinside>3.0
+</td>
+<td class=cellinside>1.4
+</td>
+<td class=cellinside>0.2
+</td>
+<td class=cellinside>setosa
+</td></tr>
+ 
+<tr> 
+<td class=firstcolumn>3
+</td>
+<td class=cellinside>4.7
+</td>
+<td class=cellinside>3.2
+</td>
+<td class=cellinside>1.3
+</td>
+<td class=cellinside>0.2
+</td>
+<td class=cellinside>setosa
+</td></tr>
+ 
+<tr> 
+<td class=firstcolumn>4
+</td>
+<td class=cellinside>4.6
+</td>
+<td class=cellinside>3.1
+</td>
+<td class=cellinside>1.5
+</td>
+<td class=cellinside>0.2
+</td>
+<td class=cellinside>setosa
+</td></tr>
+ 
+<tr> 
+<td class=firstcolumn>5
+</td>
+<td class=cellinside>5.0
+</td>
+<td class=cellinside>3.6
+</td>
+<td class=cellinside>1.4
+</td>
+<td class=cellinside>0.2
+</td>
+<td class=cellinside>setosa
+</td></tr>
+ 
+<tr> 
+<td class=firstcolumn>6
+</td>
+<td class=cellinside>5.4
+</td>
+<td class=cellinside>3.9
+</td>
+<td class=cellinside>1.7
+</td>
+<td class=cellinside>0.4
+</td>
+<td class=cellinside>setosa
+</td></tr>
+ 
+	</tbody>
+</table>
+ </td></table>
+ <br>
+
+<a name=Num4>&nbsp;</a>
+<p><xmp class=command>> bp <- boxplot(Petal.Width ~ Species, data = iris)</xmp></p>
+
+<p align=center><img src='GRAPH_Jun02_154213.png' border=1 width=500></p>
+
+<a name=Num5>&nbsp;</a>
+<p><xmp class=command>> HTMLplot()</xmp></p>
+
+<p class='logical'>TRUE</p>
+
+<a name=Num6>&nbsp;</a>
+<p><xmp class=command>> aov1 <- aov(Petal.Width ~ Species, data = iris)</xmp></p>
+
+<a name=Num7>&nbsp;</a>
+<p><xmp class=command>> summary(aov1)</xmp></p>
+
+
+
+
+
+<p align= center >
+<table cellspacing=0 border=1><caption align=bottom class=captiondataframe></caption>
+<tr><td>
+	<table border=0 class=dataframe>
+	<tbody> <tr class= firstline > <th></th><th>Df</th><th>Sum Sq</th><th>Mean Sq</th><th>F value</th><th>Pr(>F)</th><th></th> </tr>
+ 
+<tr><td class=firstcolumn>Species    </td>
+<td class=cellinside>  2      </td>
+<td class=cellinside>80.413   </td>
+<td class=cellinside>40.207   </td>
+<td class=cellinside>960      </td>
+<td class=cellinside>< 2.2e-16</td>
+<td class=cellinside>***      </td></tr>
+ 
+<tr><td class=firstcolumn>Residuals  </td>
+<td class=cellinside>147      </td>
+<td class=cellinside> 6.157   </td>
+<td class=cellinside> 0.042   </td>
+<td class=cellinside>         </td>
+<td class=cellinside>         </td>
+<td class=cellinside>         </td></tr>
+ 
+	</tbody>
+</table>
+ </td></table>
+ <br>
+
+<p class='character'>
+<p>--- Signif. codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</p>
+</p>
+
+<hr size=1>
+<font size=-1>
+	 Generated on: <i>Thu Jun 02 15:42:13 2011</i> - <b>R2HTML</b> 
+<hr size=1>
+	</body>
+</html>
