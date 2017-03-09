@@ -1,6 +1,6 @@
 # 2011 Meetups
 
-Meetup-2011-11-17: This is all the presentations plus a little bit of R code from the Nov 17, 2011 meetup. 
+Meetup-2011-11-17: This is all the presentations plus a little bit of R code
 
 Meetup-2011-02-03: R2wd and R2html slides and code example
 
